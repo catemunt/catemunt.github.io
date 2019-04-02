@@ -1,0 +1,18 @@
+html {
+                scroll-behavior: smooth;
+            }
+            
+            body {
+                padding-top: 40px;
+            }
+            
+            #nav {
+                position: fixed;
+                background-color: white;
+                width: 100%;
+                padding: 10px;
+                top: 0;
+            }
+            h1 {
+                padding-top: 50px;
+            }
