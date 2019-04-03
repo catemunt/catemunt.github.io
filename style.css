@@ -1,18 +1,112 @@
 html {
-                scroll-behavior: smooth;
-            }
-            
-            body {
-                padding-top: 40px;
-            }
-            
-            #nav {
-                position: fixed;
-                background-color: white;
-                width: 100%;
-                padding: 10px;
-                top: 0;
-            }
-            h1 {
-                padding-top: 50px;
-            }
+    scroll-behavior: smooth;
+    }
+
+body {
+    padding-top: 0px;
+    margin: 0;
+    max-width: 1300px;
+}
+
+*w {
+    outline: red 1px solid;
+}
+
+.nav {
+    height: 100%;
+    width: 120px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.nav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.nav a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 120px;
+    padding: 0px;
+}
+
+.header {
+    background-image: radial-gradient(rgba(159, 159, 159, 0.25),rgba(255, 255, 255, 0.3)),url(img/bowie.JPG);
+    max-width: 1200px;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+#logo {
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 20%;
+    
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: 18% 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#section {
+    grid-column: 1/2;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+
+.gallery {
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-right: 0px;
+    
+}
+
+.gallery a {
+    margin: 10px;
+    margin-right: 0;
+    position: relative;
+    width: 18em;
+    height: 12em;
+    overflow: hidden;
+}
+
+.gallery img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: auto;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+
+}
+
+.quotes{
+    max-height: 15em;
+}
+
+
+h1 {
+    padding-top: 50px;
+}
