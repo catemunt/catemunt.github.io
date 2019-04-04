@@ -2,6 +2,7 @@
     <head>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
         <link rel="stylesheet" href="style.css" />
     </head>
@@ -9,10 +10,11 @@
 <body>
     
     <div class="nav">
+        <a href="#"><img id="smalllogo" src="img/logosmall.png"></a>
         <a href="#section">Portfolio</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
+        <a href="#quotes">Inspo</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
 
     </div>
     
@@ -37,8 +39,8 @@
                 <a data-fancybox="gallery" href="img/temple.jpg">
                     <img class="thumbnail" src="img/temple.jpg">
                 </a>
-                <a data-fancybox="gallery" href="img/viet1.JPG">
-                    <img class="thumbnail" src="img/viet1.JPG">
+                <a data-fancybox="gallery" href="img/nyc2.jpg">
+                    <img class="thumbnail" src="img/nyc2.JPG">
                 </a>
                 <a data-fancybox="gallery" href="img/nyc1.jpg">
                     <img class="thumbnail" src="img/nyc1.jpg">
@@ -66,28 +68,76 @@
         </div>
 
         <div class="quotes">
-            <h1 id="cricket"></h1>
-            blah blah <br /> blah blah <br /> blah blah <br /> blah blah <br /> blah blah <br /> blah blah <br />
-           
+            <span id="quotes"></span>
+            <div class="slides fade">
+                <div class="quotetext">
+                    <p>“Photography is a way of feeling, of touching, of loving. What you have caught on film is captured forever… It remembers little things, long after you have forgotten everything.” – Aaron Siskind </p>
+                </div>
+            </div>
+            
+            <div class="slides fade">
+                <div class="quotetext">
+                    <p>“The best thing about a picture is that it never changes, even when the people in it do.” – Andy Warhol</p>
+                </div>
+            </div>
+            
+            <div class="slides fade">
+                <div class="quotetext">
+                    <p>“Photography takes an instant out of time, altering life by holding it still.” – Dorothea Lange</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div style="text-align: center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
         </div>
         
+        <script>
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+              var i;
+              var slides = document.getElementsByClassName("slides");
+              var dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 6000); // Change image every 2 seconds
+            }
+        </script>
         
-        <div class="about">
-            <h1 id="rugby">Rugby</h1>
-            blah blah <br /> blah blah <br /> blah blah <br /> blah blah <br /> blah blah <br /> blah blah <br />
-            blah blah <br /> blah blah <br /> blah blah <br /> blah blah <br /> blah blah <br /> blah blah <br /> 
-            blah blah <br /> blah blah <br /> blah blah <br /> blah blah <br /> blah blah <br /> blah blah <br /> 
-            blah blah <br /> blah blah <br /> blah blah <br /> blah blah <br /> blah blah <br /> blah blah <br /> 
-            blah blah <br /> blah blah <br /> blah blah <br /> blah blah <br /> blah blah <br /> blah blah <br /> 
+        
+        <div class="aboutcontact">
+            <div id="about">
+                <h1>About Me</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis placerat ligula erat, sit amet pharetra sem interdum sit amet.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis placerat ligula erat, sit amet pharetra sem interdum sit amet.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis placerat ligula erat.</p>
+            </div>
+            
+            <div id="contact">
+                <h1>Contact Me</h1>
+                <p>
+                    You can contact me here:
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis placerat ligula erat, sit amet pharetra sem interdum sit amet.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis placerat ligula erat, sit amet pharetra sem interdum sit amet.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+            </div>
         </div>
         
         <div class="footer">
-            <h1 id="soccer">Soccer</h1>
-            blah blah <br /> blah blah <br /> blah blah <br /> blah blah <br /> blah blah <br /> blah blah <br />
-            blah blah <br /> blah blah <br /> blah blah <br /> blah blah <br /> blah blah <br /> blah blah <br /> 
-            blah blah <br /> blah blah <br /> blah blah <br /> blah blah <br /> blah blah <br /> blah blah <br /> 
-            blah blah <br /> blah blah <br /> blah blah <br /> blah blah <br /> blah blah <br /> blah blah <br /> 
-            blah blah <br /> blah blah <br /> blah blah <br /> blah blah <br /> blah blah <br /> blah blah <br /> 
+            <div id="footer">
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-pinterest"></a>
+                <a href="#" class="fa fa-facebook"></a>
+            </div>
         </div>
    </div> 
 </body>
